@@ -10,7 +10,7 @@ class About extends Component {
     }
 
     componentDidMount() {
-        let url = "http://localhost/bk-kozara/wordpress/wordpress/wp-json/wp/v2/posts?categories=3&order=asc";
+        const url = "http://localhost/bk-kozara/wordpress/wordpress/wp-json/wp/v2/posts?categories=3&order=asc";
         fetch(url)
             .then(res => res.json())
             .then(data => this.setState({

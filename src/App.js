@@ -1,8 +1,9 @@
 import React from 'react';
 
 // Import all components
-import About from './components/about/about';
-import Header from './components/header/header';
+import About from './components/about/About';
+import Header from './components/header/Header';
+import Contact from './components/contact/Contact';
 import Footer from './components/footer/Footer';
 
 // Import Styles
@@ -14,6 +15,7 @@ function App() {
     <div className="App">
       <Header />
       <About />
+      <Contact />
       <Footer />
     </div>
   );

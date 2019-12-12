@@ -12,7 +12,7 @@ const Footer = () => {
                     <img
                         src="/images/socialIcons/instagram.png"
                         alt="instagram"
-                        class="social-widget__icon"
+                        className="social-widget__icon"
                 />
                 </a>
                 <a
@@ -22,7 +22,7 @@ const Footer = () => {
                     <img
                         src="/images/socialIcons/facebook.png"
                         alt="facebook"
-                        class="social-widget__icon"
+                        className="social-widget__icon"
                 />
                 </a>
                 <a
@@ -32,7 +32,7 @@ const Footer = () => {
                     <img 
                         src="/images/socialIcons/youtube.png"
                         alt="youtube"
-                        class="social-widget__icon"
+                        className="social-widget__icon"
                     />
                 </a>
             </div>
