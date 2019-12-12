@@ -1,0 +1,23 @@
+.footer {
+    background-color: $bk-gray;
+    color: $bk-font-white;
+    padding: 4.5rem;
+    text-align: center;
+    &__disc {
+        font-size: .750rem;
+        margin-top: 2rem;
+        text-align: center;
+    }
+}
+
+ .social-widget {
+        display: inline-flex;
+        & a {
+            margin: 0 1rem;
+        }
+        &__icon {
+            display: block;
+            height: auto;
+            width: 2.500rem;
+        }
+    }

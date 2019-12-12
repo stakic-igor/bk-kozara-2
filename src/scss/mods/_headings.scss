@@ -1,0 +1,19 @@
+@import '../helpers/vars';
+
+.heading {
+    display: inline-block;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    color: $bk-font-main;
+    text-transform: uppercase;
+    &::after {
+        content: "";
+        display: block;
+        width: 22.5%;
+        min-width: 2em;
+        height: 6px;
+        background-color: $bk-yellow;
+        margin-top: 1rem;
+    }
+}
