@@ -3,6 +3,7 @@
     color: $bk-font-white;
     padding: 4.5rem;
     text-align: center;
+    border-bottom: 1rem solid $bk-yellow;
     &__disc {
         font-size: .750rem;
         margin-top: 2rem;
@@ -19,5 +20,10 @@
             display: block;
             height: auto;
             width: 2.500rem;
+            opacity: .7;
+            &:hover {
+                transition: opacity ease-in 140ms;
+                opacity: 1;
+            }
         }
     }
