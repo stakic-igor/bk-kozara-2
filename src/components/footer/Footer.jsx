@@ -36,6 +36,7 @@ const Footer = () => {
                     />
                 </a>
             </div>
+            <img src="./images/bk-kozara-no-white.svg" alt="BK Kozara Logo" className="footer__logo" />
             <p className="footer__disc">&copy; BK-kozara || { new Date().getFullYear() }</p>
         </footer>
     )

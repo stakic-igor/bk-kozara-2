@@ -3,10 +3,15 @@
 @import './helpers/vars',
         './helpers/mixin';
 
-@import './mods/_headings';
+@import '_settings';
+
+@import './mods/_headings',
+        './mods/_buttons';
 
 @import './layout/_header',
+        './layout/_news',
         './layout/_about',
+        './layout/_sponsors',
         './layout/_contact',
         './layout/_footer';
 

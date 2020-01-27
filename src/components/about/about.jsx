@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { fetchAbout } from "../../api/about-api";
 
 class About extends Component {
 
@@ -10,17 +11,13 @@ class About extends Component {
     }
 
     componentDidMount() {
-        const url = "http://localhost/bk-kozara/wordpress/wordpress/wp-json/wp/v2/posts?categories=3&order=asc&_embed";
-        fetch(url)
-            .then(res => res.json())
-            .then(data => this.setState({
+        fetchAbout()
+        .then(data => this.setState({
                 aboutPosts: data
-            }))
-        }
-        
-        componentDidUpdate() {
-            console.log(this.state.aboutPosts)
-
+            })
+        ).catch((e) => {
+            alert('Something went wrong, ', e)
+        })
     }
 
     render() {
@@ -33,16 +30,20 @@ class About extends Component {
                         <h3 className="heading">{post.title.rendered}</h3>
                         <div dangerouslySetInnerHTML={{__html: post.content.rendered}} className="about-card__content__paragraph"></div>
                     </div>
-                    <img 
-                        src={post._embedded['wp:featuredmedia'][0].source_url}
+                    <img
+                        src={
+                            post.featured_media === 0 ?
+                            `${process.env.REACT_APP_BASE_MEDIA_URL}/2020/01/bk-kozara-logo.jpg` :
+                            post._embedded['wp:featuredmedia'][0].source_url
+                        }
                         className="about-card__img"
-                        alt={post._embedded['wp:featuredmedia'][0].slug}
+                        alt={post.featured_media === 0 ? "featured image" : post._embedded['wp:featuredmedia'][0].alt_text}
                         />
             </div>
             )
 
         return (
-        <div className="about">{post}</div>
+        <div className="about content">{post}</div>
         )
     }
 }
